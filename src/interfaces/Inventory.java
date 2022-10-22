@@ -1,5 +1,8 @@
 package interfaces;
 
+import Interators.InventoryIterator;
+
 public interface Inventory {
-    // getIterator
+    InventoryIterator getIterator()  ;
+    
 }

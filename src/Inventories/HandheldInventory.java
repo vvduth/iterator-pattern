@@ -1,4 +1,6 @@
-package interfaces;
+package Inventories;
+
+import interfaces.Inventory;
 
 public class HandheldInventory implements Inventory {
     // item right: public getter private setter
@@ -10,4 +12,11 @@ public class HandheldInventory implements Inventory {
             // pass this instance
         }
     */ 
+
+    /*
+     * public InventoryInterator GetItemInterator() {
+     *  return new HandHeldInventoryInterator() ; 
+     * }
+     * 
+     */
 }

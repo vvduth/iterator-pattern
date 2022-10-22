@@ -17,7 +17,7 @@ public class HandheldInventory implements Inventory {
         this.right = rightHand ;
         this.left = leftHand ; 
     }
-
+    
     @Override
     public InventoryIterator getIterator() {
         return new HandheldInventoryIterator(this) ; 

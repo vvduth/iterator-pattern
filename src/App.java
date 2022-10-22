@@ -5,16 +5,24 @@ import interfaces.Items;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Items item1 = new Items("gun") ;
-        Items item2 = new Items("apple");
-        Inventory inv = new HandheldInventory(item1, item2) ;
-        InventoryIterator iterator = inv.getIterator() ;
-        System.out.println();
+        Items item1 = new Items("sword");
+        Items item2 = new Items("shield");
+        Inventory inv = new HandheldInventory(item1, item2);
+        InventoryIterator iterator = inv.getIterator();
         while (iterator.HasNext()) {
-            Items i = iterator.current() ; 
-            // do smt
-            System.out.println(i.name);
-            iterator.Next();
+            Items currentItem = iterator.current() ;
+            System.out.println(currentItem.name);
+            iterator.Next(); 
         }
+     
+
+    }
+
+    public Items useRightItem(InventoryIterator i) {
+        if (i.HasNext()) {
+            Items rightItem = i.current();
+            return rightItem;
+        }
+        return null;
     }
 }
